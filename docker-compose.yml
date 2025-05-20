@@ -8,6 +8,6 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.pair-presentation.rule=Host(`pair.jesperdsj.dk`)"
       - "traefik.http.routers.pair-presentation.entrypoints=websecure"
-      - "traefik.http.routers.pair-presentation.tls.certresolver=letsencrypt"
+      - "traefik.http.routers.pair-presentation.tls.certresolver=myresolver"
       - "traefik.http.services.pair-presentation.loadbalancer.server.port=4173"
     restart: unless-stopped
