@@ -1,0 +1,17 @@
+{
+  "name": "Vue + Tailwind",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "Vue.volar"
+  ],
+  "postCreateCommand": "npm install",
+  "forwardPorts": [5173],
+  "remoteUser": "node"
+}
