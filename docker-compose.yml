@@ -10,4 +10,10 @@ services:
       - "traefik.http.routers.pair-presentation.entrypoints=websecure"
       - "traefik.http.routers.pair-presentation.tls.certresolver=myresolver"
       - "traefik.http.services.pair-presentation.loadbalancer.server.port=4173"
+    networks:
+      - traefik-net
     restart: unless-stopped
+
+networks:
+  traefik-net:
+    external: true
